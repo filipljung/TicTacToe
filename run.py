@@ -1,25 +1,58 @@
-print("Wellcome to quiz game !!")
-print('NOTE: if your spelling is incorrect then it is considered as wrong answer')
-score = 0
-question_no = 0
-playing = input('Do you want to play ? ').lower()
-if playing == 'yes':
-    question_no += 1
-    ques = input(f'\n{question_no}. what does CPU stand for? ').lower()
-    if ques == 'central processing unit':
-        score +=1
-        print('correct! you got 1 point')
-else:
-        print('Incorrect!')
-        print(f'current answer is --> central processing unit')
+# Define a function to ask a multiple-choice question
+def ask_question(question, options):
+  # Print the question and the options
+  print(question)
+  for i in range(len(options)):
+    print(str(i + 1) + ") " + options[i])
+  
+  # Get the user's answer
+  while True:
+    try:
+      # Read the answer as an integer
+      answer = int(input("Enter the number of your answer: "))
+      
+      # Check if the answer is within the range of options
+      if 1 <= answer <= len(options):
+        # Return the answer as a zero-based index
+        return answer - 1
+      else:
+        print("Please enter a valid answer.")
+    except ValueError:
+      print("Please enter a valid number.")
 
-# ------1
-question_no += 1
-ques = input(f'\n{question_no}. what does GPU stand for? ').lower()
-    
-if ques == 'graphics processing unit':
-        score +=1
-        print('correct! you got 1 point')
-else:
-        print('Incorrect!')
-        print(f'current answer is --> graphics processing unit')
+# Define a list of questions and answers
+questions = [
+  {
+    "question": "What is the capital of uk?",
+    "options": ["Paris", "London", "Rome"],
+    "answer": 1
+  },
+  {
+    "question": "What is the largest ocean on earth?",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean"],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the longest river in the world?",
+    "options": ["Nile", "Amazon", "Mississippi"],
+    "answer": 0
+  }
+]
+
+# Set the initial score to zero
+score = 0
+
+# Loop through the questions
+for question in questions:
+  # Ask the question
+  answer = ask_question(question["question"], question["options"])
+  
+  # Check if the answer is correct
+  if answer == question["answer"]:
+    score += 1
+    print("Correct!")
+  else:
+    print("Incorrect. The correct answer is: " + question["options"][question["answer"]])
+
+# Print the final score
+print("You scored " + str(score) + " out of " + str(len(questions)) + ".")
