@@ -9,3 +9,17 @@ if playing == 'yes':
     if ques == 'central processing unit':
         score +=1
         print('correct! you got 1 point')
+else:
+        print('Incorrect!')
+        print(f'current answer is --> central processing unit')
+
+# ------1
+question_no += 1
+ques = input(f'\n{question_no}. what does GPU stand for? ').lower()
+    
+if ques == 'graphics processing unit':
+        score +=1
+        print('correct! you got 1 point')
+else:
+        print('Incorrect!')
+        print(f'current answer is --> graphics processing unit')
