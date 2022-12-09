@@ -1,6 +1,6 @@
-# Project Name
+# Computer Quiz
 > Welcome to my Computer Quiz about everything, its about general education good luck!
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://www.example.com). 
 
 ## Table of Contents
 * [General Info](#general-information)
