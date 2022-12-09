@@ -24,9 +24,9 @@ def ask_question(question, options):
 questions = [
   {
   print("Welcome to the quiz! Please read the questions carefully and enter the number of your answer.")
-  "question": "What is the capital of uk?",
+  "question": "Where is Fashion Capital of the world?",
   "options": ["Paris", "London", "Rome"],
-  "answer": 1
+  "answer": 0
   },
   {
   print("Please read the questions carefully and enter the number of your answer.")
@@ -50,13 +50,13 @@ questions = [
   print("Please read the questions carefully and enter the number of your answer.")
   "question": "What is the highest mountain in the world?",
   "options": ["Lhotse", "K2", "Mount everest"],
-  "answer": 0
+  "answer": 2
   },
   {
   print("Please read the questions carefully and enter the number of your answer.")
-  "question": "What is the name of the longest river in the world?",
-  "options": ["Nile", "Amazon", "Mississippi"],
-  "answer": 0
+  "question": "What is the largest company of the world?",
+  "options": ["Amazon", "Walmart", "Apple"],
+  "answer": 2
   }
 ]
   
