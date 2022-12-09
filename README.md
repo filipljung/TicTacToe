@@ -1,5 +1,5 @@
 # Project Name
-> Outline a brief description of your project.
+> Welcome to my Computer Quiz about everything, its about general education good luck!
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
