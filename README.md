@@ -55,12 +55,12 @@ Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- make it more like a game and maybe player 1 & 2
-- make a leaderboard so that you can see people answers all over the world
+- make it nice with a board behind it 
+- make a leaderboard so that you can see peoples wins 
 
 To do:
-- more questions
-- animations that show a picture of the right answer
+- more friendly and just with a click to put X or O on the Board
+- maybe little more animated with the Cirle and X, and the board itself 
 
 
 ## Acknowledgements
@@ -77,7 +77,7 @@ Created by [@filipljung](@github.com/filipljung) - feel free to contact me!
 
 ## FAQ
 
-about TicTacToe is a game 
+a game i did for room for improvement and challange myself do get better to understand coding and how to do more friendly stuff that all can use.
 
 #### How did you make the game?
 i try to make it as simple to play as possible and make it easy to understand how to play it so everybody can play
