@@ -1,80 +1,194 @@
-# Define a function to ask a multiple-choice question
-def ask_question(question, options):
-  # Print the question and the options
-  print(question)
-  for i in range(len(options)):
-    print(str(i + 1) + ") " + options[i])
-  
-  # Get the user's answer
-  while True:
-    try:
-      # Read the answer as an integer
-      answer = int(input("Enter the number of your answer: "))
-      
-      # Check if the answer is within the range of options
-      if 1 <= answer <= len(options):
-        # Return the answer as a zero-based index
-        return answer - 1
-      else:
-        print("Please enter a valid answer.")
-    except ValueError:
-      print("Please enter a valid number.")
+def main():
+# The main function
+    introduction = intro()
+    board = create_grid()
+    pretty = printPretty(board)
+    symbol_1, symbol_2 = sym()
+    full = isFull(board, symbol_1, symbol_2) # The function that starts the game is also in here.
+    
 
-# Define a list of questions and answers
-questions = [
-  {
-  print("Welcome to the quiz! Please read the questions carefully and enter the number of your answer.")
-    "question": "Where is Fashion Capital of the world?",
-    "options": ["Paris", "London", "Rome"],
-    "answer": 0
-  },
-  {
-  print("Please read the questions carefully and enter the number of your answer.")
-    "question": "What is the largest ocean on earth?",
-    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean"],
-    "answer": 0
-  },
-  {
-  print("Please read the questions carefully and enter the number of your answer.")
-    "question": "What is the name of the longest river in the world?",
-    "options": ["Mississippi", "Amazon", "Nile"],
-    "answer": 2
-  },
-  {
-  print("Please read the questions carefully and enter the number of your answer.")
-    "question": "What is the capital of uk?",
-    "options": ["Paris", "London", "Rome"],
-    "answer": 1
-  },
-  {
-  print("Please read the questions carefully and enter the number of your answer.")
-    "question": "What is the highest mountain in the world?",
-    "options": ["Lhotse", "K2", "Mount everest"],
-    "answer": 2
-  },
-  {
-  print("Please read the questions carefully and enter the number of your answer.")
-    "question": "What is the largest company of the world?",
-    "options": ["Amazon", "Walmart", "Apple"],
-    "answer": 2
-  }
-]
-  
+    
 
-# Set the initial score to zero
-score = 0
 
-# Loop through the questions
-for question in questions:
-  # Ask the question
-  answer = ask_question(question["question"], question["options"])
-  
-  # Check if the answer is correct
-  if answer == question["answer"]:
-    score += 1
-    print("Correct!")
-  else:
-    print("Incorrect. The correct answer is: " + question["options"][question["answer"]])
+def intro():
+# This function introduces the rules of the game Tic Tac Toe
+    print("Hello! Welcome to Pam's Tic Tac Toe game!")
+    print("\n")
+    print("Rules: Player 1 and player 2, represented by X and O, take turns "
+          "marking the spaces in a 3*3 grid. The player who succeeds in placing "
+          "three of their marks in a horizontal, vertical, or diagonal row wins.")
+    print("\n")
+    input("Press enter to continue.")
+    print("\n")
 
-# Print the final score
-print("You scored " + str(score) + " out of " + str(len(questions)) + ".")
+
+
+def create_grid():
+# This function creates a blank playboard
+    print("Here is the playboard: ")
+    board = [[" ", " ", " "],
+             [" ", " ", " "],
+             [" ", " ", " "]]        
+    return board
+
+
+
+def sym():
+# This function decides the players' symbols
+    symbol_1 = input("Player 1, do you want to be X or O? ")
+    if symbol_1 == "X":
+        symbol_2 = "O"
+        print("Player 2, you are O. ")
+    else:
+        symbol_2 = "X"
+        print("Player 2, you are X. ")
+    input("Press enter to continue.")
+    print("\n")
+    return (symbol_1, symbol_2)
+
+
+
+def startGamming(board, symbol_1, symbol_2, count):
+# This function starts the game.
+
+    # Decides the turn
+    if count % 2 == 0:
+        player = symbol_1
+    elif count % 2 == 1:
+        player = symbol_2
+    print("Player "+ player + ", it is your turn. ")
+    row = int(input("Pick a row:"
+                    "[upper row: enter 0, middle row: enter 1, bottom row: enter 2]:"))
+    column = int(input("Pick a column:"
+                       "[left column: enter 0, middle column: enter 1, right column enter 2]"))
+
+
+    # Check if players' selection is out of range
+    while (row > 2 or row < 0) or (column > 2 or column < 0):
+        outOfBoard(row, column)
+        row = int(input("Pick a row[upper row:"
+                        "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
+        column = int(input("Pick a column:"
+                           "[left column: enter 0, middle column: enter 1, right column enter 2]"))
+
+        # Check if the square is already filled
+    while (board[row][column] == symbol_1)or (board[row][column] == symbol_2):
+        filled = illegal(board, symbol_1, symbol_2, row, column)
+        row = int(input("Pick a row[upper row:"
+                        "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
+        column = int(input("Pick a column:"
+                            "[left column: enter 0, middle column: enter 1, right column enter 2]"))    
+        
+    # Locates player's symbol on the board
+    if player == symbol_1:
+        board[row][column] = symbol_1
+            
+    else:
+        board[row][column] = symbol_2
+    
+    return (board)
+
+
+
+def isFull(board, symbol_1, symbol_2):
+    count = 1
+    winner = True
+# This function check if the board is full
+    while count < 10 and winner == True:
+        gaming = startGamming(board, symbol_1, symbol_2, count)
+        pretty = printPretty(board)
+        
+        if count == 9:
+            print("The board is full. Game over.")
+            if winner == True:
+                print("There is a tie. ")
+
+        # Check if here is a winner
+        winner = isWinner(board, symbol_1, symbol_2, count)
+        count += 1
+    if winner == False:
+        print("Game over.")
+        
+    # This is function gives a report 
+    report(count, winner, symbol_1, symbol_2)
+
+
+
+def outOfBoard(row, column):
+# This function tells the players that their selection is out of range
+    print("Out of boarder. Pick another one. ")
+    
+    
+
+def printPretty(board):
+# This function prints the board nice!
+    rows = len(board)
+    cols = len(board)
+    print("---+---+---")
+    for r in range(rows):
+        print(board[r][0], " |", board[r][1], "|", board[r][2])
+        print("---+---+---")
+    return board
+
+
+
+def isWinner(board, symbol_1, symbol_2, count):
+# This function checks if any winner is winning
+    winner = True
+    # Check the rows
+    for row in range (0, 3):
+        if (board[row][0] == board[row][1] == board[row][2] == symbol_1):
+            winner = False
+            print("Player " + symbol_1 + ", you won!")
+   
+        elif (board[row][0] == board[row][1] == board[row][2] == symbol_2):
+            winner = False
+            print("Player " + symbol_2 + ", you won!")
+            
+            
+    # Check the columns
+    for col in range (0, 3):
+        if (board[0][col] == board[1][col] == board[2][col] == symbol_1):
+            winner = False
+            print("Player " + symbol_1 + ", you won!")
+        elif (board[0][col] == board[1][col] == board[2][col] == symbol_2):
+            winner = False
+            print("Player " + symbol_2 + ", you won!")
+
+    # Check the diagnoals
+    if board[0][0] == board[1][1] == board[2][2] == symbol_1:
+        winner = False 
+        print("Player " + symbol_1 + ", you won!")
+
+    elif board[0][0] == board[1][1] == board[2][2] == symbol_2:
+        winner = False
+        print("Player " + symbol_2 + ", you won!")
+
+    elif board[0][2] == board[1][1] == board[2][0] == symbol_1:
+        winner = False
+        print("Player " + symbol_1 + ", you won!")
+
+    elif board[0][2] == board[1][1] == board[2][0] == symbol_2:
+        winner = False
+        print("Player " + symbol_2 + ", you won!")
+
+    return winner
+    
+
+
+def illegal(board, symbol_1, symbol_2, row, column):
+    print("The square you picked is already filled. Pick another one.")
+
+    
+def report(count, winner, symbol_1, symbol_2):
+    print("\n")
+    input("Press enter to see the game summary. ")
+    if (winner == False) and (count % 2 == 1 ):
+        print("Winner : Player " + symbol_1 + ".")
+    elif (winner == False) and (count % 2 == 0 ):
+        print("Winner : Player " + symbol_2 + ".")
+    else:
+        print("There is a tie. ")
+
+# Call Main
+main()
