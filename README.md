@@ -1,5 +1,5 @@
 # TictacToe
-> Welcome to my Computer Quiz about everything, its about general education good luck!
+> Welcome to my TicTacToe game, Invite you best friend and goodluck!
 > Live demo [_here_](https://www.example.com). 
 
 ## Table of Contents
@@ -48,7 +48,7 @@ log in to the live site and wait for it to start and start answer the questions 
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: still inn progress do get updated and make it more realistic.
 
 
 ## Room for Improvement
@@ -65,14 +65,13 @@ To do:
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This project was inspired by web dev simplified
+- This project was based on [this tutorial](https://www.geeksforgeeks.org).
+- Many thanks to @oskarrenefalk to help me with this project and my mentor.
 
 
 ## Contact
 Created by [@filipljung](@github.com/filipljung) - feel free to contact me!
-
 
 
 ## FAQ

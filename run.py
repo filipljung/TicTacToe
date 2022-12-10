@@ -15,7 +15,7 @@ def main():
 
 def intro():
 # This function introduces the rules of the game Tic Tac Toe
-    print("Hello! Welcome to Pam's Tic Tac Toe game!")
+    print("Hello! Welcome to Filip's Tic Tac Toe game!")
     print("\n")
     print("Rules: Player 1 and player 2, represented by X and O, take turns "
           "marking the spaces in a 3*3 grid. The player who succeeds in placing "
