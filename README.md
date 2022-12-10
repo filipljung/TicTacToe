@@ -1,4 +1,4 @@
-# Computer Quiz
+# TictacToe
 > Welcome to my Computer Quiz about everything, its about general education good luck!
 > Live demo [_here_](https://www.example.com). 
 
@@ -15,16 +15,30 @@
 * [Contact](#contact)
 
 
+## Tic Tac Toe is a two-player game (one of them being played by computer or human). In this game, there is a board with 3 x 3 squares.
+
+The two players take turns putting marks on a 3x3 board. The goal of Tic Tac Toe game is to be one of the players to get three same symbols in a row - horizontally, vertically or diagonally on a 3 x 3 grid. The player who first gets 3 of his/her symbols (marks) in a row - vertically, horizontally, or diagonally wins the game, and the other loses the game. The game can be played by two players. There are two options for players: (a) Human (b) Computer
+
+GAME RULES:
+A player can choose between two symbols with his opponent, usual game uses “X” and “O”.
+
+The player that gets to play first will get the "X" mark (we call him/her player 1) and the player that gets to play second will get the "O" mark (we call him/her player 2).
+
+Player 1 and 2 take turns making moves with Player 1 playing mark “X” and Player 2 playing mark “O”.
+
+A player marks any of the 3x3 squares with his mark (“X” or “O”) and their aim is to create a straight line horizontally, vertically or diagonally with two intensions:
+a. One of the players gets three of his/her marks in a row (vertically, horizontally, or diagonally) i.e. that player wins the game.
+b. If no one can create a straight line with their own mark and all the positions on the board are occupied, then the game ends in a
+
+## Implementation Plan:
+
+
+
 
 ## General Information
-- i think with this project people can get more educated and learn more about things in general
-- The purpose of the project is to get more people general educated on all the things 
+- Learn to play a python TicTacToe
+- The purpose of is to learn to create a game, and make it as functional as possible 
 
-
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
 
 
 ## Usage
@@ -63,9 +77,11 @@ Created by [@filipljung](@github.com/filipljung) - feel free to contact me!
 
 ## FAQ
 
+about TicTacToe is a game 
+
 #### How did you make the game?
-i try to make it as simple to play as possible with print just like Welcome to my computer Quiz
-and if you guess correct it will print correct answer and add a point to your score that you will see in the end.
+i try to make it as simple to play as possible and make it easy to understand how to play it so everybody can play
+
 
 
 
