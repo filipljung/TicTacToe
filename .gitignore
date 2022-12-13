@@ -3,6 +3,7 @@ core.mongo*
 core.python*
 env.py
 __pycache__/
-*.py[cod]
+app.py
 node_modules/
 .github/
+creds.json
