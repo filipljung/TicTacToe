@@ -8,7 +8,6 @@ def main():
     symbol_1, symbol_2 = sym()
     full = isFull(board, symbol_1, symbol_2)
 
-    
 
 
 def intro():
