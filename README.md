@@ -1,6 +1,6 @@
 # TictacToe
 > Welcome to my TicTacToe game, Invite you best friend and goodluck!
-> Live demo [_here_](https://www.example.com). 
+> Live demo https://tictactoe123.herokuapp.com/
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -32,6 +32,7 @@ b. If no one can create a straight line with their own mark and all the position
 
 ## Implementation Plan:
 
+Picture in map
 
 
 
