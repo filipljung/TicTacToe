@@ -3,7 +3,7 @@
 > Live demo https://tictactoe123.herokuapp.com/
 
 # Welcome to the game 
-![screenshot](screenshot.png)
+![screenshot](pictures/screenshot.png)
 
 ## Table of Contents
 * [General Info](#general-information)
