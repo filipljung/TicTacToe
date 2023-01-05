@@ -2,6 +2,9 @@
 > Welcome to my TicTacToe game, Invite you best friend and goodluck!
 > Live demo https://tictactoe123.herokuapp.com/
 
+# Welcome to the game 
+![screenshot](screenshot.png)
+
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
