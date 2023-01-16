@@ -1,129 +1,191 @@
-# TictacToe
-> Welcome to my TicTacToe game, Invite you best friend and goodluck!
-> Live demo https://tictactoe123.herokuapp.com/
+# TIC-TAC-TOE
 
-# Welcome to the game 
-![screenshot](pictures/screenshot.png)
+Tic Tac Toe is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
+This is a fun game where the user has a chance to play against the computer and test their logical thinking.  
+
+[Live version of my project](https://tictactoe123.herokuapp.com/)
+
+# How to play
+
+Tic Tac Toe is a two-player game and it's based on the classic pen-and-paper game. You can find all details of the game here: [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe). 
+
+In this version, the player is represented with the 'X' sign and the computer with 'O'.
+
+Players take turns by entering a number from 1 to 9, corresponding to the square in the 3*3 grid.   
+
+After each round, the user can see his and the computer's choice on the board. 
+
+The winner is the first player who gets his three marks ('X' or 'O') on a vertical, horizontal, or diagonal row.    
+
+## Table of Content
+
+* [Flowchart](#Flowchart)
+
+* [User Stories](#User-Stories)
+
+* [Features](#Features)
+  * [Existing features](#existing-features)
+  * [Future Features](#future-features)
+  
+* [Technologies Used](#Technologies-Used)
+  * [Languages & Libraries](#Languages-&-Libraries)
+  * [Programs](#Programs) 
+
+* [Testing](#Testing)
+  * [Manual testing](#manual-testing)
+  * [Validator Testing](#validator-testing) 
+  * [Testing User Stories](#testing-user-stories)
+      
+ * [Deployment](#Deployment)
+
+* [Credits](#Credits)
+    
+------
+## Flowchart
+
+![](computer/images/python_flowchart)
+
+## User Stories
+
+ * As a visiting user, I would like to be able to play the game against an opponent.
+ * As a visiting user, I would like to be able to restart the game. 
+ * As a visiting user, I would like to be able to see the final score of the game. 
+
+## Features
+### Existing features
+
+**Displays the welcome message and prompts the user to input the name**
+
+  * The welcome intro clearly shows the user what is the name of the game and prompts the user to enter the name.
+   
+![](docs/images/intro.png)
+
+**Displays the rules of the game**
+
+  * This section gives the user clear instructions on how the game works.
+  * It is valuable to the user to get to know the rules before starting the game so the user can get good results. 
+
+  ![](docs/images/rules.png)
+
+**Displays the game board and prompts the user to enter the number**
+
+  * In this section the player is entering his move according to his preference therefore the player can see his move on the board signed with 'X'.
+  * It helps the user to know which position on the board is occupied and to follow the moves of his opponent.
+
+  ![](docs/images/userinput.png)
+  
+ **Input validation and error-checking**
+
+  The program will show the message to the user in case the wrong value is given which will guide the user to input the requested value.
+  
+  * You must enter your name with letters  
+  * You must enter the numbers
+  * You cannot enter numbers less than 1 and greater than 9
+  * You cannot choose an already occupied square  
+
+![](docs/images/error4.png)
+![](docs/images/error1.png)
+![](docs/images/error2.png)
+![](docs/images/error3.png)
+
+**Play against the computer**
+
+  * When the user makes his move, the computer generates a random input and makes his move.
+  * Playing against a computer will add to the fun and make it more interesting for the user.
+
+![](docs/images/computer.png)
+
+**Checks the outcome of the game**
+
+  * The outcome of the game is checked after each player's move and it shows on the screen whether the user wins or the computer wins the game. In case nobody is a winner, the game is over and it is a tie. 
+  * This section provides the user with the message of who is the winner of the game. 
+
+![](docs/images/winner1.png)
+![](docs/images/winner2.png)
+![](docs/images/tie.png)
+
+**Restarts the game**
+
+  * It is prompt whether the user wants to play again. The user can choose 'yes' or 'no'. 
+  If he chooses 'yes', the new board shows on the screen on which he can make new moves. In case the user chooses 'no', the program exits from the game.     
+
+![](docs/images/restart.png)
+
+**Displays score and exits**
+
+  * When the user chooses not to play again, the score displays on the screen and a 'thank you' message". 
+  * It provides the user with information about who won most of the rounds if the player chose to play the game several times. 
+
+![](docs/images/score.png)
+  
+
+### Future Features
+
+* Allow the player to choose his symbol for playing.
+* Randomly choose which player is going first.
+* Implement different levels of game difficulty: easy, medium and hard.
+
+## Technologies Used
+
+### Languages & Libraries
+
+Python - for building the game.
+
+JavaScript - generated from the python essential template built by Code Institute.
+
+HTML - generated from the python essential template built by Code Institute.
+
+The following Python libraries were used:
+
+  * random -  to randomize the choices for the computer
+
+  * os -  to eliminate previous code on the terminal window making it clutter-free and improving UX
+
+  * time - for delaying the next part of the game on the screen. 
+
+  ### Programs
+
+GitHub- was used to store the project.
+
+Git - was used for version control.
+
+Visual Studio - was used as a local IDE.
+
+Heroku - was used to deploy the app.
+
+[Lucid Chart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=branded_sitelink_en_lucidchart&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=21193716975&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=1012212&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQiAsoycBhC6ARIsAPPbeLsu4EhgeL7oc8f5b4Q0lNfOeEAW1uvF-pLQ2OGzaXgm9ZB7HkvQCDUaAoXdEALw_wcB) - was used for creating and designing the flowchart of the project.
+
+## Testing
+
+Testing document can be found [here](TESTING.md)
 
 
-## Tic Tac Toe is a two-player game (one of them being played by computer or human). In this game, there is a board with 3 x 3 squares.
+## Deployment
 
-The two players take turns putting marks on a 3x3 board. The goal of Tic Tac Toe game is to be one of the players to get three same symbols in a row - horizontally, vertically or diagonally on a 3 x 3 grid. The player who first gets 3 of his/her symbols (marks) in a row - vertically, horizontally, or diagonally wins the game, and the other loses the game. The game can be played by two players. There are two options for players: (a) Human (b) Computer
+The game was deployed on Heroku. The following steps were used to deploy the game to Heroku:
 
-GAME RULES:
-A player can choose between two symbols with his opponent, usual game uses “X” and “O”.
-
-The player that gets to play first will get the "X" mark (we call him/her player 1) and the player that gets to play second will get the "O" mark (we call him/her player 2).
-
-Player 1 and 2 take turns making moves with Player 1 playing mark “X” and Player 2 playing mark “O”.
-
-A player marks any of the 3x3 squares with his mark (“X” or “O”) and their aim is to create a straight line horizontally, vertically or diagonally with two intensions:
-a. One of the players gets three of his/her marks in a row (vertically, horizontally, or diagonally) i.e. that player wins the game.
-b. If no one can create a straight line with their own mark and all the positions on the board are occupied, then the game ends in a
-
-## Implementation Plan:
-
-Picture in map
-
-
-
-## General Information
-- Learn to play a python TicTacToe
-- The purpose of is to learn to create a game, and make it as functional as possible 
+  * Sign into Heroku.
+  * On the main dashboard choose to Create new app.
+  * Choose a unique name for your project and the region, based on where you are located (as   I'm in Europe, I chose Europe), and then click on Create app.
+  * Then go to the Settings tab.
+  * In Settings click on Reveal Config Vars and enter the following key: PORT and     
+    value: 8000.    
+  * Next scroll down to Buildpacks and click Add buildpack, choose Python and then click Save 
+    changes.
+  * Repeat the above step and select nodejs and click Save changes.
+  * Next go to the Deploy tab.
+  * Under the Deployment method, choose GitHub and then click Connect to GitHub you will probably be prompted to sign into your GitHub.
+  * Then you can search for your GitHub repository, in my case this was pp3-tic-tac-toe and click connect.
+  * To deploy automatically you will need to select Enable Automatic Deploys which will rebuild the app every time you push a change to GitHub.
+  * To deploy manually go to the Manual deploy section below and click Deploy Branch. Just remember you will need to do this every time you make a change to your code on Github.
+  * Below you will see your app was successfully deployed with a view button below this that will take you to the URL of your deployed app.
 
 
+## Credits
 
-## Usage
-How does one go about using it?
-log in to the live site and wait for it to start and start answer the questions and get your final result
-
-
-
-## Project Status
-Project is: still inn progress do get updated and make it more realistic.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- make it nice with a board behind it 
-- make a leaderboard so that you can see peoples wins 
-
-To do:
-- more friendly and just with a click to put X or O on the Board
-- maybe little more animated with the Cirle and X, and the board itself 
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by web dev simplified
-- This project was based on [this tutorial](https://www.geeksforgeeks.org).
-- Many thanks to @oskarrenefalk to help me with this project and my mentor.
-
-
-## Contact
-Created by [@filipljung](@github.com/filipljung) - feel free to contact me!
-
-
-## FAQ
-
-a game i did for room for improvement and challange myself do get better to understand coding and how to do more friendly stuff that all can use.
-
-#### How did you make the game?
-i try to make it as simple to play as possible and make it easy to understand how to play it so everybody can play
-
-
-
-
-
-## User stories 
-
-1. I want to have an idea of what the program is about
-2. I want to be able to have clear and simple navigation
-3. I want to be able to log in and return to a program later
-4. I want to be able to get feedback in different stages of program
-5. I want to be informed why my input is not valid
-6. I want input parameters to be displayed clearly
-7. I want to see what choices I made
-8. I want to be able to play multiple times without logging in again
-9. I want to use the program with real-world data
-10. I want to use a program that allows certain creativity inside parameters
-11. I want to know the final result of using the program
-
-## Site Owner 
-
-12. I want user to easily and intuitively navigate troughout program
-13. I want user to be guided and informed how to make valid inputs
-14. I want user to be able to personalize his experience and inputs
-15. I want user to have clear feedback from inputs
-16. I want user details to be stored and retrieved on demand into the database
-17. I want user to have the option to exit the program
-18. I want user to know the final result
-## Languages
-https://www.python.org/ programming language for the logic of the program
- Frameworks & Tools
-
-https://git-scm.com/ was used for version control within VSCode to push the code to GitHub
-
-https://github.com/ GitHub was used as a remote repository to store project code
-
-https://www.google.co.uk/sheets/about/ Google Sheets were used to store player's details
-
-https://dashboard.heroku.com/ Heroku Platform was used to deploy the project into live environment
-
-https://fontawesome.com/ - icons from Font Awesome were used in the footer below the program terminal
-
-https://code.visualstudio.com/ (VSCode) VSCode was used to write the project code using Code Institute template
+* Code Institute for the deployment terminal.
+* Code Institute for the Python Linter.
+* Wikipedia for the details of the Tic-Tac-Toe game. 
+* [Stack Overflow](https://stackoverflow.com/questions/33203038/nested-loops-in-nested-lists) for finding the solution on how to check the winning condition in the game.
+ 
