@@ -66,14 +66,14 @@ The winner is the first player who gets his three marks ('X' or 'O') on a vertic
   * This section gives the user clear instructions on how the game works.
   * It is valuable to the user to get to know the rules before starting the game so the user can get good results. 
 
-  ![](docs/images/continue.png)
+  ![](desktop/docs/continue.png)
 
 **Displays the game board and prompts the user to enter the number**
 
   * In this section the player is entering his move according to his preference therefore the player can see his move on the board signed with 'X'.
   * It helps the user to know which position on the board is occupied and to follow the moves of his opponent.
 
-  ![](docs/images/continue.png)
+  ![](desktop/docs/continue.png)
   
  **Input validation and error-checking**
 
@@ -92,13 +92,13 @@ The winner is the first player who gets his three marks ('X' or 'O') on a vertic
 **Play against the computer**
 
   * When the user makes his move, the computer generates a random input and makes his move.
-  * Playing against a computer will add to the fun and make it more interesting for the user.
+  * Playing against a another person will add to the fun and make it more interesting for the user.
 
 ![](docs/images/computer.png)
 
 **Checks the outcome of the game**
 
-  * The outcome of the game is checked after each player's move and it shows on the screen whether the user wins or the computer wins the game. In case nobody is a winner, the game is over and it is a tie. 
+  * The outcome of the game is checked after each player's move and it shows on the screen whether who wins the game. In case nobody is a winner, the game is over and it is a tie. 
   * This section provides the user with the message of who is the winner of the game. 
 
 ![](docs/images/winner1.png)
