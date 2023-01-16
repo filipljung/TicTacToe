@@ -66,14 +66,14 @@ The winner is the first player who gets his three marks ('X' or 'O') on a vertic
   * This section gives the user clear instructions on how the game works.
   * It is valuable to the user to get to know the rules before starting the game so the user can get good results. 
 
-  ![](docs/images/rules.png)
+  ![](docs/images/continue.png)
 
 **Displays the game board and prompts the user to enter the number**
 
   * In this section the player is entering his move according to his preference therefore the player can see his move on the board signed with 'X'.
   * It helps the user to know which position on the board is occupied and to follow the moves of his opponent.
 
-  ![](docs/images/userinput.png)
+  ![](docs/images/continue.png)
   
  **Input validation and error-checking**
 
