@@ -1,3 +1,6 @@
+![TicTacToe](https://raw.githubusercontent.com/filipljung/TicTacToe/main/Pictures/Screenshot%202023-06-26%20185623.png)
+
+## Live: https://tictactoe123.herokuapp.com
 # Tic Tac Toe Game
 This is a simple command-line Tic Tac Toe game implemented in Python. It allows two players to take turns marking spaces in a 3x3 grid. The first player uses the symbol "X" and the second player uses the symbol "O". The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. If all the spaces on the board are filled and no player has won, the game ends in a tie.
 
