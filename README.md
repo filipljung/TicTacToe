@@ -57,5 +57,3 @@ The code is structured into several functions:
 ## Contributing
 Contributions to this project are welcome! If you have any suggestions or improvements, please feel free to open an issue or submit a pull request.
 
-## License
-This project is licensed under the MIT License.
